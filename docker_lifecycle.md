@@ -48,11 +48,17 @@ A Dockerfile is a text file with instructions to build an image. Instructions ar
 
 Example:
 
+```dockerfile
 FROM ubuntu:latest
+
 WORKDIR /app
+
 COPY . .
-RUN apt-get update && apt-get install -y python3
+
+RUN apt-get update && apt-get install -y python3 python3-pip
+
 CMD ["python3", "app.py"]
+```
 
 ---
 
